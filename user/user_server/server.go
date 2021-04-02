@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"log"
 	"net"
 
 	"../userpb"
@@ -16,6 +15,8 @@ type server struct {}
 func (*server) UserById(ctx context.Context, req *userpb.UserRequest) (*userpb.UserResponse, error) {
 	fmt.Printf("UserById function was invoked with %v", req)
 	id := req.GetId()
+
+	fmt.Println("req id====>",id)
 
 	user,_ := getSingleUser(id)
 
@@ -40,7 +41,7 @@ func (*server) UserByListId(ctx context.Context, req *userpb.UsersRequest) (*use
 
 	ids := req.GetIds();
 
-	fmt.Println(ids);
+	fmt.Println("request ids===>",ids);
 
 	listOfId = append(listOfId,ids...)
 
@@ -72,7 +73,7 @@ func main() {
 	lis, err := net.Listen("tcp", "0.0.0.0:50051")
 
 	if err != nil {
-		log.Fatal("Failed to listen %v", err)
+		fmt.Printf("Failed to listen %v", err)
 	}
 	fmt.Println("working: server running on port: 50051")
 
@@ -82,7 +83,7 @@ func main() {
 	reflection.Register(s)
 
 	if err := s.Serve(lis); err != nil {
-		log.Fatal("failed to serve %v", err)
+		fmt.Printf("failed to serve %v", err)
 	}
 
 }
