@@ -19,6 +19,14 @@ run to start:
 $ go run user/user_server/server.go user/user_server/helper.go user/user_server/db.go user/user_server/models.go
 ```
 
+To run docker:
+Docker repo : [Golang grpc](https://hub.docker.com/repository/docker/orwync/golang_grpc_user)
+
+    RUN:
+    ```bash
+    $ docker docker container run -p 50051:50051 golang-grpc
+    ```
+
 The server will start on port 50051
 
 To connect to the server user:
@@ -42,3 +50,6 @@ Evans:
             To get users by list of Ids: call UserByListId
                 Enter the User ID one by one
                 After entering all user id: Ctrl+D
+
+        To run client:
+            ./client
