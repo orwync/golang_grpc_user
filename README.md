@@ -22,6 +22,14 @@ $ go run user/user_server/server.go user/user_server/helper.go user/user_server/
 The server will start on port 50051
 
 To connect to the server user:
+Run:
+
+```bash
+$ go run user/user_client/client.go
+```
+
+OR
+
 Evans:
 [Evans installation](https://github.com/ktr0731/evans#installation)
 
