@@ -14,12 +14,13 @@ The server will start on port 50051
 To connect to the server user:
 Evans:
 [Evans installation](https://github.com/ktr0731/evans#installation)
-Run: $ evans -p 50051 -r
 
-    In Evans CLI:
-        To get user by User Id: call UserById
-            Enter the Id
+        Run: $ evans -p 50051 -r
 
-        To get users by list of Ids: call UserByListId
-            Enter the User ID one by one
-            After entering all user id: Ctrl+D
+        In Evans CLI:
+            To get user by User Id: call UserById
+                Enter the Id
+
+            To get users by list of Ids: call UserByListId
+                Enter the User ID one by one
+                After entering all user id: Ctrl+D
