@@ -1,13 +1,22 @@
 #gRPC using golang to retrive users
 
 dependecies:
+
+```bash
 go get -u google.golang.org/grpc
+```
 
 run tests:
+
+```bash
 $ go test ./user/user_server/
+```
 
 run to start:
+
+```bash
 $ go run user/user_server/server.go user/user_server/helper.go user/user_server/db.go user/user_server/models.go
+```
 
 The server will start on port 50051
 
