@@ -7,7 +7,7 @@ func getUsers() []User {
 			FirstName: "Bruce Wayne",
 			City:      "Gotham",
 			Phone:     9876523641,
-			Height:    182,
+			Height:    6.4,
 			Married:   false,
 		},
 		User{
@@ -15,7 +15,7 @@ func getUsers() []User {
 			FirstName: "Clark Kent",
 			City:      "Methropolis",
 			Phone:     8965475235,
-			Height:    190,
+			Height:    6.7,
 			Married:   true,
 		},
 		User{
@@ -23,7 +23,7 @@ func getUsers() []User {
 			FirstName: "Diana Prince",
 			City:      "Amazon",
 			Phone:     9875412542,
-			Height:    172,
+			Height:    5.9,
 			Married:   false,
 		},
 		User{
@@ -31,7 +31,7 @@ func getUsers() []User {
 			FirstName: "Barry Allen",
 			City:      "Star City",
 			Phone:     9876523641,
-			Height:    182,
+			Height:    5.6,
 			Married:   true,
 		},
 		User{
@@ -39,7 +39,7 @@ func getUsers() []User {
 			FirstName: "Victor Stone",
 			City:      "Gotham",
 			Phone:     9856324515,
-			Height:    193,
+			Height:    6.7,
 			Married:   false,
 		},
 	}

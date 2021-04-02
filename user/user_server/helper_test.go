@@ -23,9 +23,9 @@ func TestUserId3(t *testing.T) {
 }
 
 func TestIdDosentExist(t *testing.T) {
-	user, err := getSingleUser(8)
+	_, err := getSingleUser(8)
 
 	if err.Error() != "User not found" {
-		t.Errorf("Expect user not found but got %v", user.FirstName)
+		t.Errorf("Expect user not found but got %v", err.Error())
 	}
 }

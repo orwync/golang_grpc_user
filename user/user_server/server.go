@@ -12,6 +12,7 @@ import (
 
 type server struct {}
 
+//Return User by Id
 func (*server) UserById(ctx context.Context, req *userpb.UserRequest) (*userpb.UserResponse, error) {
 	fmt.Printf("UserById function was invoked with %v", req)
 	id := req.GetId()
@@ -34,9 +35,10 @@ func (*server) UserById(ctx context.Context, req *userpb.UserRequest) (*userpb.U
 	return res, nil
 }
 
+//Return users by the list of ids
 func (*server) UserByListId(ctx context.Context, req *userpb.UsersRequest) (*userpb.UsersResponse, error) {
 	fmt.Printf("UserByListId function was invoked with %v", req)
-
+	
 	var listOfId []int32
 
 	ids := req.GetIds();
@@ -77,7 +79,7 @@ func main() {
 	}
 	fmt.Println("working: server running on port: 50051")
 
-		s := grpc.NewServer()
+	s := grpc.NewServer()
 
 	userpb.RegisterUserServiceServer(s, &server{})
 	reflection.Register(s)
@@ -85,5 +87,4 @@ func main() {
 	if err := s.Serve(lis); err != nil {
 		fmt.Printf("failed to serve %v", err)
 	}
-
 }

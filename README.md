@@ -4,6 +4,7 @@ dependecies:
 
 ```bash
 go get -u google.golang.org/grpc
+go get -u google.golang.org/protobuf
 ```
 
 run tests:
